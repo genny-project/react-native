@@ -10,36 +10,20 @@ class Login extends React.Component {
         headerStyle: { backgroundColor: 'orange' },
         headerTintColor: 'white'
     })
-
-    componentDidMount() {
-        this.watchId = navigator.geolocation.watchPosition(
-          (position) => {
-            console.log('lat ' + position.coords.latitude)
-            console.log('lon ' + position.coords.longitude)
-          },
-          (error) => {
-            // handle error
-          },
-          {
-            timeout: 20000,
-            maximumAge: 1000,
-            distanceFilter: 10,
-            enableHighAccuracy: true,
-          }
-        )
-      }
+ 
+  render() {
+    const source = { uri: 'https://keycloak.pleasedproperty.com.au/auth/realms/Genny/account' }
     
-      componentWillUnmount() {
-        navigator.geolocation.clearWatch(this.watchId)
-      }
-      
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Login</Text>
-            </View>
-        )
-    }
+    return (
+      <WebView
+        source={source}
+        style={styles.container}
+        scrollEnabled={false}
+        bounces={false}
+      />
+    )
+  }
+
 }
 
 export default Login
