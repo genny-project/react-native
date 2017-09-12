@@ -10,20 +10,20 @@ class FingerprintScannerIOS extends React.Component {
 
     componentDidMount() {
         FingerprintScanner
-        .isSensorAvailable()
-        .then(() => {
-            FingerprintScanner
-            .authenticate({ description: 'Scan your fingerprint on the device scanner to continue' })
+            .isSensorAvailable()
             .then(() => {
-                AlertIOS.alert('Authenticated successfully')
+                FingerprintScanner
+                    .authenticate({ description: 'Scan your fingerprint on the device scanner to continue' })
+                    .then(() => {
+                        AlertIOS.alert('Authenticated successfully')
+                    })
+                    .catch((error) => {
+                        AlertIOS.alert(error.message)
+                    })
             })
             .catch((error) => {
                 AlertIOS.alert(error.message)
             })
-        })
-        .catch((error) => {
-            AlertIOS.alert(error.message)
-        })
     }
 
     render() {
