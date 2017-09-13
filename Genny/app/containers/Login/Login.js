@@ -12,7 +12,7 @@ class Login extends React.Component {
   })
 
   render() {
-    const source = { uri: 'https://keycloak.pleasedproperty.com.au/auth/realms/Genny/account' }
+    const source = { uri: 'https://bouncer.outcome-hub.com/auth/realms/channel40/account' }
 
     return (
       <WebView
