@@ -18,13 +18,13 @@ class Main extends React.Component {
                 console.log('lon ' + position.coords.longitude)
             },
             (error) => {
-                // handle error
+                console.log('error ', error.message)
             },
             {
-                timeout: 20000,
+                timeout: 100000,
                 maximumAge: 1000,
                 distanceFilter: 10,
-                enableHighAccuracy: true,
+                enableHighAccuracy: false
             }
         )
     }

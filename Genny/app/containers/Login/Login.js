@@ -18,8 +18,29 @@ class Login extends React.Component {
       <WebView
         source={source}
         style={styles.container}
-        scrollEnabled={false}
-        bounces={false}
+        scalesPageToFit={false}
+        onNavigationStateChange={(state) => {
+          const { url } = state
+          const willRedirect = url.includes('login-redirect?')
+          
+          if (willRedirect) {
+            const { navigate } = this.props.navigation
+            navigate('Main')
+          }
+
+          return !willRedirect
+        }}
+        onShouldStartLoadWithRequest={(request) => {
+          const { url } = request
+          const willRedirect = url.includes('login-redirect?')
+          
+          if (willRedirect) {
+            const { navigate } = this.props.navigation
+            navigate('Main')
+          }
+
+          return !willRedirect
+        }}
       />
     )
   }
