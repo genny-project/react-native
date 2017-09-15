@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import {
-    Alert,
-    Text,
-    TouchableOpacity,
-    View
-} from 'react-native'
+import { Alert, Text, View } from 'react-native'
 import FingerprintScanner from 'react-native-fingerprint-scanner'
+
+import styles from './styles'
 
 class FingerprintScannerAndroid extends Component {
 
@@ -19,17 +16,16 @@ class FingerprintScannerAndroid extends Component {
             .isSensorAvailable()
             .then(() => {
                 FingerprintScanner
-                    .authenticate({ onAttempt: this.handleAuthenticationAttempted })
+                    .authenticate({ onAttempt: () => {} })
                     .then(() => {
+                        this.props.navigation.navigate('Main')
                         Alert.alert('Fingerprint Authentication', 'Authenticated successfully')
                     })
                     .catch((error) => {
-                        this.setState({ errorMessage: error.message })
                         Alert.alert(error.message)
                     })
             })
             .catch(error => {
-                this.setState({ errorMessage: error.message })
                 Alert.alert(error.message)
             })
     }
@@ -38,22 +34,13 @@ class FingerprintScannerAndroid extends Component {
         FingerprintScanner.release()
     }
 
-    handleAuthenticationAttempted = (error) => {
-        this.setState({ errorMessage: error.message })
-    }
-
     render() {
-        const { errorMessage } = this.state
-
         return (
-            <View>
-                <Text>
-                    {errorMessage || 'Scan your fingerprint on the device scanner to continue'}
-                </Text>
+            <View style={styles.container}>
+                <Text>Android Fingerprint Scanner</Text>
             </View>
         )
     }
 }
-
 
 export default FingerprintScannerAndroid

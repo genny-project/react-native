@@ -5,11 +5,15 @@ import { StackNavigator } from 'react-navigation'
 
 import Main from './containers/Main'
 import Login from './containers/Login'
+import FingerprintScannerIOS from './containers/FingerprintScannerIOS'
+import FingerprintScannerAndroid from './containers/FingerprintScannerAndroid'
 import store from './store/configureStore'
 
 const Stack = StackNavigator({
   Login: { screen: Login },
-  Main: { screen: Main }
+  Main: { screen: Main },
+  iOSScanner: { screen: FingerprintScannerIOS },
+  AndroidScanner: { screen: FingerprintScannerAndroid}
 })
 
 const HomeInAStackWithStore = () => (

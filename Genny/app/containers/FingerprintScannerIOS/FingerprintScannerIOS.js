@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { AlertIOS } from 'react-native'
+import { View, Text, AlertIOS } from 'react-native'
 import FingerprintScanner from 'react-native-fingerprint-scanner'
+
+import styles from './styles'
 
 class FingerprintScannerIOS extends React.Component {
 
@@ -15,6 +17,7 @@ class FingerprintScannerIOS extends React.Component {
                 FingerprintScanner
                     .authenticate({ description: 'Scan your fingerprint on the device scanner to continue' })
                     .then(() => {
+                        this.props.navigation.navigate('Main')
                         AlertIOS.alert('Authenticated successfully')
                     })
                     .catch((error) => {
@@ -27,7 +30,11 @@ class FingerprintScannerIOS extends React.Component {
     }
 
     render() {
-        return false
+        return (
+            <View style={styles.container}>
+                <Text>iOS Fingerprint Scanner</Text>
+            </View>
+        )
     }
 }
 

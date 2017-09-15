@@ -21,7 +21,7 @@ class Main extends React.Component {
                 console.log('error ', error.message)
             },
             {
-                timeout: 100000,
+                timeout: 20000,
                 maximumAge: 1000,
                 distanceFilter: 10,
                 enableHighAccuracy: false
