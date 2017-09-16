@@ -5,6 +5,11 @@ import styles from './styles'
 
 class Main extends React.Component {
 
+    state = {
+        latitude: 0,
+        longitude: 0
+    }
+
     static navigationOptions = ({ navigation }) => ({
         title: 'Main',
         headerStyle: { backgroundColor: 'orange' },
@@ -14,6 +19,10 @@ class Main extends React.Component {
     componentDidMount() {
         this.watchId = navigator.geolocation.watchPosition(
             (position) => {
+                this.setState({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                })
                 console.log('lat ' + position.coords.latitude)
                 console.log('lon ' + position.coords.longitude)
             },
@@ -36,7 +45,7 @@ class Main extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Main Menu</Text>
+                <Text>{this.state.latitude + ', ' + this.state.longitude}</Text>
             </View>
         )
     }
