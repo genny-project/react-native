@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { WebView } from 'react-native'
+import { Platform, Button, WebView } from 'react-native'
 
 import styles from './styles'
 
@@ -9,8 +9,17 @@ class Login extends React.Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: 'Login',
+    headerTintColor: 'white',
     headerStyle: { backgroundColor: 'orange' },
-    headerTintColor: 'white'
+    headerRight: (<Button
+      title='Go To Main'
+      onPress={() => {
+        const route = (Platform.OS === 'ios') ? 'iOSScanner' : 'AndroidScanner'
+        const { navigate } = navigation
+        navigate(route)
+        }
+      }
+    />)
   })
 
   render() {
@@ -49,7 +58,7 @@ class Login extends React.Component {
         onShouldStartLoadWithRequest={(request) => {
           const { url } = request
           const willRedirect = url.includes(redirectURL)
-          
+
           if (willRedirect) {
             const { navigate } = this.props.navigation
             navigate('iOSScanner')
