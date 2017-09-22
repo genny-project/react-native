@@ -1,5 +1,7 @@
 package com.genny;
 
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 

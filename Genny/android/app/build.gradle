@@ -105,11 +105,11 @@ android {
     }
     signingConfigs {
         release {
-            if (project.hasProperty('CH40_RELEASE_STORE_FILE')) {
-                storeFile file(CH40_RELEASE_STORE_FILE)
-                storePassword CH40_RELEASE_STORE_PASSWORD
-                keyAlias CH40_RELEASE_KEY_ALIAS
-                keyPassword CH40_RELEASE_KEY_PASSWORD
+            if (project.hasProperty('GENNY_RELEASE_STORE_FILE')) {
+                storeFile file(GENNY_RELEASE_STORE_FILE)
+                storePassword GENNY_RELEASE_STORE_PASSWORD
+                keyAlias GENNY_RELEASE_KEY_ALIAS
+                keyPassword GENNY_RELEASE_KEY_PASSWORD
             }
         }
     }
@@ -144,9 +144,6 @@ android {
 }
 
 dependencies {
-    compile project(':mobile-center-crashes')
-    compile project(':mobile-center-analytics')
-    compile project(':mobile-center')
     compile project(':react-native-fingerprint-scanner')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"

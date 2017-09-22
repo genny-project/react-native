@@ -23,7 +23,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		17C6A9A3FE1D44E1B2744210 /* libRNMobileCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4153752AFA4022983C7524 /* libRNMobileCenter.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -38,9 +37,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* GennyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GennyTests.m */; };
 		59A586136292002C6A5462ED /* libPods-Genny-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E00D125A4D87639B10D4D9D8 /* libPods-Genny-tvOS.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		67C7AEFA01AE4CF6B17E5D56 /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BBF03E37974017B5B14138 /* libRNAnalytics.a */; };
 		6F2210ECC5014E5F962EBCB9 /* MobileCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205A6D8D9F3F4F9B82DC49CC /* MobileCenter-Config.plist */; };
-		7393322EFA374B5998508566 /* libRNCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CC99CBECF24216A3EB8F5D /* libRNCrashes.a */; };
 		73A763361F63F89300F05FE8 /* Walk.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 73A763351F63F89300F05FE8 /* Walk.gpx */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -232,27 +229,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = ReactNativeFingerprintScanner;
 		};
-		732A911E1F752BDE00F12D8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB818D9E8A7E462785AEE3A0 /* RNMobileCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C35AEC211EF91F9300931F0C;
-			remoteInfo = RNMobileCenter;
-		};
-		732A91231F752BDF00F12D8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B59D9B177A124486AB7EA73D /* RNCrashes.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5419C2701D824AA700DDF3A1;
-			remoteInfo = RNCrashes;
-		};
-		732A91281F752BE600F12D8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A2BD245FCCA643BBB384F23A /* RNAnalytics.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 548694001D8384E600E6685A;
-			remoteInfo = RNAnalytics;
-		};
 		73A7632D1F63F6E100F05FE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -348,11 +324,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		94EBFBEDA9EB9E7A06A6D55A /* libPods-Genny.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Genny.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2BD245FCCA643BBB384F23A /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAnalytics.xcodeproj; path = "../node_modules/mobile-center-analytics/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; };
-		AB818D9E8A7E462785AEE3A0 /* RNMobileCenter.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNMobileCenter.xcodeproj; path = "../node_modules/mobile-center/ios/RNMobileCenter.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B47ABF48B01045EE29464F8C /* Pods-Genny-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genny-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genny-tvOS/Pods-Genny-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B59D9B177A124486AB7EA73D /* RNCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCrashes.xcodeproj; path = "../node_modules/mobile-center-crashes/ios/RNCrashes.xcodeproj"; sourceTree = "<group>"; };
 		C74E856B357A165045AC3BEE /* Pods-Genny-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genny-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Genny-tvOS/Pods-Genny-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D74B2767F4F9CB9275A521B4 /* libPods-GennyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GennyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCE8949EE36F4E17D343212 /* Pods-Genny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genny/Pods-Genny.debug.xcconfig"; sourceTree = "<group>"; };
@@ -389,9 +362,6 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				0BCDB2F9D9B049C8BC25A726 /* libReactNativeFingerprintScanner.a in Frameworks */,
-				17C6A9A3FE1D44E1B2744210 /* libRNMobileCenter.a in Frameworks */,
-				67C7AEFA01AE4CF6B17E5D56 /* libRNAnalytics.a in Frameworks */,
-				7393322EFA374B5998508566 /* libRNCrashes.a in Frameworks */,
 				F7E75DC6B19D0EB0AA7880B4 /* libPods-Genny.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,30 +531,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		732A911B1F752BDE00F12D8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				732A911F1F752BDE00F12D8E /* libRNMobileCenter.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		732A91201F752BDF00F12D8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				732A91241F752BDF00F12D8E /* libRNCrashes.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		732A91251F752BDF00F12D8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				732A91291F752BE600F12D8E /* libRNAnalytics.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,9 +556,6 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				717391C0E1FF4F2B844CC4DF /* ReactNativeFingerprintScanner.xcodeproj */,
-				AB818D9E8A7E462785AEE3A0 /* RNMobileCenter.xcodeproj */,
-				A2BD245FCCA643BBB384F23A /* RNAnalytics.xcodeproj */,
-				B59D9B177A124486AB7EA73D /* RNCrashes.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -790,6 +733,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = A7X3EFUZNC;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -864,18 +810,6 @@
 				{
 					ProductGroup = 73134F5D1F684CA200683190 /* Products */;
 					ProjectRef = 717391C0E1FF4F2B844CC4DF /* ReactNativeFingerprintScanner.xcodeproj */;
-				},
-				{
-					ProductGroup = 732A91251F752BDF00F12D8E /* Products */;
-					ProjectRef = A2BD245FCCA643BBB384F23A /* RNAnalytics.xcodeproj */;
-				},
-				{
-					ProductGroup = 732A91201F752BDF00F12D8E /* Products */;
-					ProjectRef = B59D9B177A124486AB7EA73D /* RNCrashes.xcodeproj */;
-				},
-				{
-					ProductGroup = 732A911B1F752BDE00F12D8E /* Products */;
-					ProjectRef = AB818D9E8A7E462785AEE3A0 /* RNMobileCenter.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1055,27 +989,6 @@
 			fileType = archive.ar;
 			path = libReactNativeFingerprintScanner.a;
 			remoteRef = 73134F7F1F684CA200683190 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		732A911F1F752BDE00F12D8E /* libRNMobileCenter.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNMobileCenter.a;
-			remoteRef = 732A911E1F752BDE00F12D8E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		732A91241F752BDF00F12D8E /* libRNCrashes.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNCrashes.a;
-			remoteRef = 732A91231F752BDF00F12D8E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		732A91291F752BE600F12D8E /* libRNAnalytics.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNAnalytics.a;
-			remoteRef = 732A91281F752BE600F12D8E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		73A7632E1F63F6E100F05FE8 /* libthird-party.a */ = {
@@ -1532,7 +1445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A7X3EFUZNC;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fingerprint-scanner/ios",
@@ -1561,7 +1474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A7X3EFUZNC;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-fingerprint-scanner/ios",

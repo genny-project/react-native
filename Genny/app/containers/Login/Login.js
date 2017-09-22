@@ -9,35 +9,67 @@ class Login extends React.Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: 'Login',
-    headerTintColor: 'white',
-    headerStyle: { backgroundColor: 'orange' },
-    headerRight: (<Button
-      title='Go To Main'
-      onPress={() => {
-        const route = (Platform.OS === 'ios') ? 'iOSScanner' : 'AndroidScanner'
-        const { navigate } = navigation
-        navigate(route)
+    headerTintColor: 'green',
+    headerStyle: { backgroundColor: 'white' },
+    headerRight: (
+      <Button
+        title='Go To Main'
+        onPress={() => {
+          const route = (Platform.OS === 'ios') ? 'iOSScanner' : 'AndroidScanner'
+          const { navigate } = navigation
+          navigate(route)
         }
-      }
-    />)
+        }
+      />
+    )
   })
 
-  render() {
-    const source = { uri: 'https://bouncer.outcome-hub.com/auth/realms/channel40/account' }
-    const redirectURL = 'https://bouncer.outcome-hub.com/auth/realms/channel40/account/login-redirect?'
+  componentDidMount() {
+    console.log("did mount")
+    var ws = new WebSocket('ws://bridge.outcome-hub.com/frontend');
 
-    // call getCurrentPosition to force Android to request access
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        this.setState({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-          error: null,
-        });
-      },
-      (error) => this.setState({ error: error.message }),
-      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
-    )
+    ws.onopen = () => {
+      let payload = JSON.stringify({
+        "token": "",
+        "msg_type": "DATA_MSG",
+        "data_type": "GPS",
+        "delete": false,
+        "items": [
+          {
+            "id": null,
+            "created": "2017-09-25'T'11:2000]",
+            "latitude": "-37.86330",
+            "longitude": "145.0922",
+            "bearing": "0",
+            "targetCode": "PER_USER1"
+          }
+        ]
+      })
+
+      // connection opened
+      ws.send(payload) // send a message
+    }
+
+    ws.onmessage = (e) => {
+      // a message was received
+      console.log("message ", e.data);
+    }
+
+    ws.onerror = (e) => {
+      // an error occurred
+      console.log("error ", e.message);
+    }
+
+    ws.onclose = (e) => {
+      // connection closed
+      console.log("close ", e.code, e.reason);
+    }
+  }
+
+  render() {
+    console.log("will render")
+    const source = { uri: 'https://bouncer.outcome-hub.com/auth/realms/genny/account' }
+    const redirectURL = 'https://bouncer.outcome-hub.com/auth/realms/genny/account/login-redirect?'
 
     return (
       <WebView

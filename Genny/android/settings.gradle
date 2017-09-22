@@ -1,10 +1,4 @@
 rootProject.name = 'Genny'
-include ':mobile-center-crashes'
-project(':mobile-center-crashes').projectDir = new File(rootProject.projectDir, '../node_modules/mobile-center-crashes/android')
-include ':mobile-center-analytics'
-project(':mobile-center-analytics').projectDir = new File(rootProject.projectDir, '../node_modules/mobile-center-analytics/android')
-include ':mobile-center'
-project(':mobile-center').projectDir = new File(rootProject.projectDir, '../node_modules/mobile-center/android')
 include ':react-native-fingerprint-scanner'
 project(':react-native-fingerprint-scanner').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fingerprint-scanner/android')
 
