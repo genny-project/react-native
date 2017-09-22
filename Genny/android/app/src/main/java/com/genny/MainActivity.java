@@ -1,6 +1,7 @@
 package com.genny;
 
 import com.facebook.react.ReactActivity;
+import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 
 public class MainActivity extends ReactActivity {
 

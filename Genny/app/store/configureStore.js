@@ -2,7 +2,7 @@ import { AsyncStorage } from 'react-native'
 import { compose, createStore } from 'redux'
 import { persistStore, autoRehydrate } from 'redux-persist'
 
-import { reducer } from '../redux/channel40Redux'
+import { reducer } from '../redux/gennyRedux'
 
 const store = compose(
     autoRehydrate()
