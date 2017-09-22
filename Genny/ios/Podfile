@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Genny' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Genny
+  pod 'MobileCenter/Crashes', '~> 0.12.1'
+  pod 'MobileCenter/Analytics', '~> 0.12.1'
+  pod 'RNMobileCenterShared', '~> 0.9.0'
+
+  
+
+  target 'GennyTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Genny-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Genny-tvOS
+
+  target 'Genny-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

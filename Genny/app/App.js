@@ -8,6 +8,7 @@ import Login from './containers/Login'
 import FingerprintScannerIOS from './containers/FingerprintScannerIOS'
 import FingerprintScannerAndroid from './containers/FingerprintScannerAndroid'
 import store from './store/configureStore'
+import codePush from 'react-native-code-push'
 
 const Stack = StackNavigator({
   Login: { screen: Login },
@@ -21,5 +22,7 @@ const HomeInAStackWithStore = () => (
     <Stack />
   </Provider>
 )
+
+HomeInAStackWithStore = codePush(HomeInAStackWithStore)
 
 AppRegistry.registerComponent('Genny', () => HomeInAStackWithStore)
