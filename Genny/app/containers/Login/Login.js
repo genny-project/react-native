@@ -25,7 +25,6 @@ class Login extends React.Component {
   })
 
   componentDidMount() {
-    console.log("did mount")
     var ws = new WebSocket('ws://bridge.outcome-hub.com/frontend');
 
     ws.onopen = () => {
