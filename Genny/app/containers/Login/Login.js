@@ -67,7 +67,7 @@ class Login extends React.Component {
 
   render() {
     console.log("will render")
-    const source = { uri: 'https://bouncer.outcome-hub.com/auth/realms/genny/account' }
+    const source = { uri: 'http://localhost:5000' }
     const redirectURL = 'https://bouncer.outcome-hub.com/auth/realms/genny/account/login-redirect?'
 
     return (
