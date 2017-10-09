@@ -3,15 +3,19 @@ React Native version of genny alyson
 
 ## Installation
 1. Clone the repository
+
    `git clone https://github.com/genny-project/react-native.git`
 
 2. Navigate inside the *Genny* folder
-   `cd Genny`
+
+   `cd react-native/Genny`
 
 3. Install dependencies
+
    `npm install`
 
 4. Run the project
+
   * iOS - `react-native run-ios`
   * Android - `react-native run-android`
 
