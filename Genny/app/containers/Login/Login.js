@@ -24,50 +24,9 @@ class Login extends React.Component {
     )
   })
 
-  componentDidMount() {
-    var ws = new WebSocket('ws://bridge.outcome-hub.com/frontend');
-
-    ws.onopen = () => {
-      let payload = JSON.stringify({
-        "token": "",
-        "msg_type": "DATA_MSG",
-        "data_type": "GPS",
-        "delete": false,
-        "items": [
-          {
-            "id": null,
-            "created": "2017-09-25'T'11:2000]",
-            "latitude": "-37.86330",
-            "longitude": "145.0922",
-            "bearing": "0",
-            "targetCode": "PER_USER1"
-          }
-        ]
-      })
-
-      // connection opened
-      ws.send(payload) // send a message
-    }
-
-    ws.onmessage = (e) => {
-      // a message was received
-      console.log("message ", e.data);
-    }
-
-    ws.onerror = (e) => {
-      // an error occurred
-      console.log("error ", e.message);
-    }
-
-    ws.onclose = (e) => {
-      // connection closed
-      console.log("close ", e.code, e.reason);
-    }
-  }
-
   render() {
     console.log("will render")
-    const source = { uri: 'http://localhost:5000' }
+    const source = { uri: 'http://localhost:3000' }
     const redirectURL = 'https://bouncer.outcome-hub.com/auth/realms/genny/account/login-redirect?'
 
     return (

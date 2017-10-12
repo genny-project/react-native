@@ -26,6 +26,24 @@ class Main extends React.Component {
                 })
                 console.log('lat ' + position.coords.latitude)
                 console.log('lon ' + position.coords.longitude)
+
+                const data = {
+                    "msg_type": "DATA_MSG",
+                    "data_type": "GPS",
+                    "delete": false,
+                    "items": [
+                        {
+                            "id": null,
+                            "created": "2017-10-12'T'17:00:00",
+                            "latitude": position.coords.latitude,
+                            "longitude": position.coords.longitude,
+                            "bearing": "0",
+                            "targetCode": "PER_USER1"
+                        }
+                    ]
+                }
+
+                GennyBridge.sendMessage("DATA_MSG", data, "")
             },
             (error) => {
                 console.log('error ', error.message)
