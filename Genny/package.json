@@ -1,5 +1,5 @@
 {
-  "name": "Genny",
+  "name": "genny",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,8 +12,15 @@
     "react-native-fingerprint-scanner": "^2.2.0",
     "react-navigation": "^1.0.0-beta.11",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.0.0-beta.8",
+    "react-router-redux": "^4.0.8",
+    "redux-observable": "^0.14.1",
     "redux": "^3.7.2",
-    "redux-persist": "^4.9.1"
+    "redux-logger": "^2.8.1",
+    "redux-persist": "^4.9.1",
+    "redux-thunk": "^2.2.0",
+    "rxjs": "^5.4.0",
+    "vertx3-eventbus-client": "^3.4.2"
   },
   "devDependencies": {
     "babel-jest": "21.0.0",
