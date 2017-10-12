@@ -3,7 +3,7 @@ import {
   AUTH_LOGGED_OUT,
   RECEIVE_KEYCLOAK_CONFIG,
   LOGOUT,
-} from 'constants';
+} from '../constants';
 
 const initialState = {
     authenticated: false,

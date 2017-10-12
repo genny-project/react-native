@@ -1,4 +1,4 @@
-import { BASE_ENTITY } from 'constants';
+import { BASE_ENTITY } from '../constants';
 
 const initialState = {
   data: {},

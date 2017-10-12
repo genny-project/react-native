@@ -1,4 +1,4 @@
-import { REDIRECT } from 'constants';
+import { REDIRECT } from '../constants';
 // import history from 'views/history.js';
 
 const initialState = {

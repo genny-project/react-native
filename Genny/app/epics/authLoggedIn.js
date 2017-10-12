@@ -1,5 +1,5 @@
-import { AUTH_LOGGED_IN, BRIDGE_SENT_AUTH_INIT } from 'constants/';
-import { GennyBridge } from 'utils/genny';
+import { AUTH_LOGGED_IN, BRIDGE_SENT_AUTH_INIT } from '../constants';
+import { GennyBridge } from '../utils/genny';
 
 const authLoggedIn = action$ => {
   return action$

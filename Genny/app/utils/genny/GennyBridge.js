@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import config from 'config/config';
+import config from '../../config/config';
 import { Vertx, MessageHandler } from './vertx';
 import events from './vertx-events';
 

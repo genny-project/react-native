@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
-import { receiveKeycloakConfig, errorReceiveKeycloakConfig } from 'views/actions/keycloak.actions.js';
-import { APP_START } from 'constants/';
-import { GennyBridge } from 'utils/genny';
+import { receiveKeycloakConfig, errorReceiveKeycloakConfig } from '../views/actions/keycloak.actions.js';
+import { APP_START } from '../constants/';
+import { GennyBridge } from '../utils/genny';
 
 const appStart = action$ => {
   return action$

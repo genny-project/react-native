@@ -1,4 +1,4 @@
-import { REDIRECT } from 'constants';
+import { REDIRECT } from '../../../constants';
 
 export const CMD_REDIRECT = message => ({
   type: REDIRECT,

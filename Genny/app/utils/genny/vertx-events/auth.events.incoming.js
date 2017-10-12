@@ -1,4 +1,4 @@
-import { LOGOUT } from 'constants';
+import { LOGOUT } from '../../../constants';
 
 export const CMD_LOGOUT = () => ({
   type: LOGOUT,

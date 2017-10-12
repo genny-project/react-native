@@ -1,5 +1,5 @@
 import layoutsIncluded from '../layouts-included';
-import { LAYOUT_CHANGE } from 'constants';
+import { LAYOUT_CHANGE } from '../constants';
 
 const initialState = {
     current: null,

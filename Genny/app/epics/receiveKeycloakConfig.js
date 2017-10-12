@@ -1,5 +1,5 @@
-import { RECEIVE_KEYCLOAK_CONFIG, INIT_VERTX } from 'constants/';
-import { GennyBridge } from 'utils/genny';
+import { RECEIVE_KEYCLOAK_CONFIG, INIT_VERTX } from '../constants';
+import { GennyBridge } from '../utils/genny';
 
 const receiveKeycloakConfig = action$ => {
   return action$

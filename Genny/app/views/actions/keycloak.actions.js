@@ -1,4 +1,8 @@
-import { RECEIVE_KEYCLOAK_CONFIG, ERROR_RECEIVE_KEYCLOAK_CONFIG, AUTH_LOGGED_IN } from 'constants';
+import {
+  RECEIVE_KEYCLOAK_CONFIG,
+  ERROR_RECEIVE_KEYCLOAK_CONFIG,
+  AUTH_LOGGED_IN
+} from '../../constants';
 
 export const receiveKeycloakConfig = ({ response }) => ({
   type: RECEIVE_KEYCLOAK_CONFIG,
