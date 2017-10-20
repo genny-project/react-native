@@ -10,7 +10,7 @@ import FingerprintScannerAndroid from './containers/FingerprintScannerAndroid'
 import store from './store/configureStore'
 
 const Stack = StackNavigator({
-  Login: { screen: Login },
+  // Login: { screen: Login },
   Main: { screen: Main },
   iOSScanner: { screen: FingerprintScannerIOS },
   AndroidScanner: { screen: FingerprintScannerAndroid}
