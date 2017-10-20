@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "react": "16.0.0-alpha.12",
     "react-native": "0.48.2",
     "react-native-fingerprint-scanner": "^2.2.0",
@@ -14,9 +15,9 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.0.0-beta.8",
     "react-router-redux": "^4.0.8",
-    "redux-observable": "^0.14.1",
     "redux": "^3.7.2",
     "redux-logger": "^2.8.1",
+    "redux-observable": "^0.14.1",
     "redux-persist": "^4.9.1",
     "redux-thunk": "^2.2.0",
     "rxjs": "^5.4.0",
