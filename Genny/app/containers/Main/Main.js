@@ -42,7 +42,8 @@ class Main extends React.Component {
                         }
                     ]
                 }
-
+                
+                GennyBridge.initVertx('http://192.168.1.4:8088/frontend')
                 GennyBridge.sendMessage("DATA_MSG", data, "")
             },
             (error) => {
